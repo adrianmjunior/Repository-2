@@ -110,6 +110,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "woocommerce";
 
+/*--------------------------------------------------------------
+# custom
+--------------------------------------------------------------*/
+@import "custom/custom";
+
+
 .site-header {
   background-color: $color__header-color;
 }
@@ -126,8 +132,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   width: 60%;
   margin:0 auto;
   border-radius: 10px;
-}
-
-.site {
-  
 }
