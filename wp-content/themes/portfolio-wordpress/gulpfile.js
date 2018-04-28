@@ -1,16 +1,17 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
-const concat  = require('gulp-contact');
-const cleanCSS = require('gulp-cleanCSS');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulpautoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
 
-// Styles tasks
+
+// Styles task
 
 gulp.task('styles', function() {
     gulp.src([
-      './src/css/bootsrap.min.css',
+      './src/css/bootstrap.min.css',
       './sass/style.scss',
       './sass/woocommerce.scss'
     ])
@@ -21,21 +22,21 @@ gulp.task('styles', function() {
             cascade: false
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(contcat('style.css'))
+        .pipe(concat('style.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./'))
 });
 
-// JS tasks
+// JS task
 
 gulp.task('js', function() {
     gulp.src([
             './src/js/bootstrap.min.js',
-            './src/js/main.js',
-    ])
-    .pipe(contcat('script.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist'));
+            './src/js/main/js',
+        ])
+        .pipe(concat('script.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist'));
 });
 
 // Default task
@@ -45,6 +46,6 @@ gulp.task('default', ['styles','js']);
 // Gulp watch task
 
 gulp.task('watch', function() {
-  gulp.watch('src/js/*.js', ['js']);
-  gulp.watch('sass/*/*.scss', ['styles']);
+    gulp.watch('src/js/*.js', ['js']);
+    gulp.watch('sass/*/*.scss', ['styles']);
 });

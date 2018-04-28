@@ -356,7 +356,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #414141;
   font-family: sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -419,7 +419,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #cacaca;
+  background: #ffff;
   /* Fallback for when there is no custom background color defined. */ }
 
 hr {
@@ -1251,17 +1251,3 @@ p.no-comments {
   height: .5em; }
 .widget_price_filter .ui-slider-horizontal .ui-slider-range {
   height: 100%; }
-
-.site-header {
-  background-color: #20d2ff; }
-
-.site-title {
-  text-align: center; }
-
-.site-description {
-  text-align: center; }
-
-.post-1241 {
-  width: 60%;
-  margin: 0 auto;
-  border-radius: 10px; }

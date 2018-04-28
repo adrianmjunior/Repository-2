@@ -120,23 +120,23 @@ add_action( 'widgets_init', 'portfolio_wordpress_widgets_init' );
  * Enqueue scripts and styles.
  */
 function portfolio_wordpress_scripts() {
-	wp_enqueue_style( 'portfolio-wordpress-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'portfolio-wordpress-style', get_stylesheet_uri().'?v='.time() );
 
 	wp_enqueue_script( 'portfolio-wordpress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	// add popper for bootstrap 4 js
-	wp_enqueue_script('tether_js', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', array('jquery'), '4.0', true);
-	wp_enqueue_script('bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', array('jquery'), '4.0', true);
-	wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
 
 	// main js
 
- wp_enqueue_script('main-script', get_template_directory_uri() . '/dist/js/script.min.js', array('jquery'), time(), true);
+ wp_enqueue_script('main-script', get_template_directory_uri() . '/src/js/script.min.js', array('jquery'), time(), true);
 
 // popper js for bootstrap 4
 wp_register_script('wp-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', false, '', true );
 
 wp_enqueue_script('wp-popper');
+
+wp_enqueue_script('tether_js', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', array('jquery'), '4.0', true);
+wp_enqueue_script('bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', array('jquery'), '4.0', true);
+wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js');
 
 
 
