@@ -3,7 +3,7 @@
 get_header();
 ?>
 <div class="container">
-  <div>
+  <div class="jumbotron">
 	  <h1>The Front Page!</h1>
   </div>
 </div>
