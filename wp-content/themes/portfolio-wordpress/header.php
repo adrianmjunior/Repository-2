@@ -24,6 +24,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'portfolio-wordpress' ); ?></a>
 
+
+<div class="navigation-bar">
 	<header id="masthead" class="site-header container">
 		<div class="site-branding">
 			<?php
@@ -54,5 +56,5 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
+</div>
 	<div id="content" class="site-content">
