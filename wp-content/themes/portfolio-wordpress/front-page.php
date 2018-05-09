@@ -35,10 +35,18 @@ get_header();
 
             <div class="row excerpt align-middle">
               <div class="col-md-2">
-                <?php the_post_thumbnail( 'thumbnail' ); ?>
+                <a href="<?php echo get_the_permalink(); ?>">
+                  <?php the_post_thumbnail( 'thumbnail' ); ?>
+                </a>
               </div>
               <div class="col-md-10">
-                <h4><?php the_title(); ?></h4>
+
+
+                <a href="<?php echo get_the_permalink(); ?>">
+                  <h4><?php the_title(); ?></h4>
+                </a>
+
+
                 <?php the_excerpt(); ?>
               </div>
             </div>
